@@ -1,41 +1,206 @@
+
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta name="theme-color" content="#f7f5ee">
 <title>TotemPal | Coming Soon</title>
 
 <style>
-
 * { box-sizing: border-box; }
 
 body {
-
   margin: 0;
-
   background: #f7f5ee;
-
-  color: #344b38;
-
+  color: #273823;
   font-family: Arial, sans-serif;
-
   text-align: center;
-
 }
 
 main {
-
   min-height: 100vh;
-
-  padding: 50px 24px;
-
+  padding: 60px 24px;
   display: flex;
-
   flex-direction: column;
-
+  align-items: center;
   justify-content: center;
+}
+
+.logo {
+  width: min(90%, 540px);
+  height: auto;
+  margin-bottom: 45px;
+}
+
+.brand {
+  font-size: clamp(40px, 10vw, 76px);
+  font-weight: 800;
+  letter-spacing: -3px;
+  background: linear-gradient(
+    100deg, #17391d, #68763b,
+    #d9a345, #c95c24, #a83b20
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.coming {
+  font-size: 13px;
+  letter-spacing: 5px;
+  color: #a65b37;
+  font-weight: bold;
+  margin: 24px 0;
+}
+
+.tagline {
+  font-size: clamp(20px, 4vw, 29px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  margin: 18px 0;
+}
+
+.description {
+  max-width: 440px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #62695b;
+}
+
+.signup {
+  margin-top: 35px;
+  width: 100%;
+  max-width: 430px;
+}
+
+.signup p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 17px;
+  border: 1px solid #c8c8b9;
+  border-radius: 6px;
+  font-size: 16px;
+  background: white;
+  margin-bottom: 12px;
+}
+
+button {
+  width: 100%;
+  padding: 17px;
+  border: 0;
+  border-radius: 6px;
+  background: #344b38;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #213b29;
+}
+
+.instagram {
+  display: inline-block;
+  margin-top: 40px;
+  color: #344b38;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid #344b38;
+  padding-bottom: 5px;
+}
+
+footer {
+  margin-top: 65px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #777e70;
+}
+</style>
+</head>
+
+<body>
+<main>
+
+<img
+  src="logo.png"
+  alt="TotemPal Logo"
+  class="logo"
+  onerror="this.style.display='none';document.getElementById('fallback').style.display='block';"
+>
+
+<div id="fallback" class="brand" style="display:none">
+  TOTEMPAL
+</div>
+
+<div class="coming">
+  SOMETHING IS COMING
+</div>
+
+<h1 class="tagline">
+  LESS HOLDING.<br>
+  MORE DANCING.
+</h1>
+
+<p class="description">
+  Your new festival essential is on its way.
+  More freedom. More connection.
+  More moments with your people.
+</p>
+
+<div class="signup">
+  <p>Be the first to know when we drop.</p>
+
+  <form
+    action="https://formsubmit.co/totempal.official@gmail.com"
+    method="POST"
+  >
+    <input
+      type="hidden"
+      name="_subject"
+      value="New TotemPal Launch Signup"
+    >
+
+    <input
+      type="hidden"
+      name="_captcha"
+      value="true"
+    >
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Enter your email"
+      aria-label="Email address"
+      autocomplete="email"
+      required
+    >
+
+    <button type="submit">
+      JOIN THE LAUNCH LIST
+    </button>
+  </form>
+</div>
+
+<a
+  class="instagram"
+  href="https://www.instagram.com/totempal_official/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  FOLLOW US @TOTEMPAL_OFFICIAL
+</a>
+
+<footer>
+  TOTEMPAL © 2026 · FIND YOUR PEOPLE
+</footer>
+
+</main>
+</body>
+</html>
